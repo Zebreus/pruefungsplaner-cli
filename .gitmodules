@@ -4,3 +4,6 @@
 [submodule "libs/pruefungsplaner-auth"]
 	path = libs/pruefungsplaner-auth
 	url = https://github.com/Zebreus/pruefungsplaner-auth.git
+[submodule "libs/pruefungsplaner-datamodel"]
+	path = libs/pruefungsplaner-datamodel
+	url = https://github.com/Zebreus/pruefungsplaner-datamodel.git

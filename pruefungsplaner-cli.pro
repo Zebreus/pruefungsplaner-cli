@@ -1,8 +1,9 @@
 QT -= gui
-
-CONFIG += c++11 console
+QT += websockets
+CONFIG += c++11 console network
 CONFIG -= app_bundle
 
+include($$PWD/libs/pruefungsplaner-datamodel/pruefungsplaner-datamodel.pri)
 include($$PWD/libs/pruefungsplaner-auth/client/client.pri)
 INCLUDEPATH += $$PWD/libs/cpptoml/include
 
