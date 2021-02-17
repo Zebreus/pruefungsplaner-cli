@@ -20,7 +20,7 @@ public:
     QString getUsername() const;
 
 signals:
-    void loginSuccess();
+    void loginSuccess(QSharedPointer<Client> client);
     void loginError(const QString& message);
     void usernameChanged(QString username);
 

@@ -70,7 +70,7 @@ void ConnectionManager::providerError(pruefungsplanerAuth::Client::Error error)
 void ConnectionManager::planerLoginSuccess()
 {
     qDebug() << "Successful login";
-    emit loginSuccess();
+    emit loginSuccess(planerClient);
 }
 
 void ConnectionManager::planerLoginFailed()
