@@ -3,6 +3,7 @@ QT -= gui
 CONFIG += c++11 console
 CONFIG -= app_bundle
 
+include($$PWD/libs/pruefungsplaner-auth/client/client.pri)
 INCLUDEPATH += $$PWD/libs/cpptoml/include
 
 # You can make your code fail to compile if it uses deprecated APIs.

@@ -1,3 +1,6 @@
 [submodule "libs/cpptoml"]
 	path = libs/cpptoml
 	url = https://github.com/skystrife/cpptoml.git
+[submodule "libs/pruefungsplaner-auth"]
+	path = libs/pruefungsplaner-auth
+	url = https://github.com/Zebreus/pruefungsplaner-auth.git
