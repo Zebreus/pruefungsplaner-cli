@@ -1,6 +1,6 @@
 QT -= gui
 QT += websockets core
-CONFIG += c++11 console network
+CONFIG += c++2a console network
 CONFIG -= app_bundle
 
 include($$PWD/libs/pruefungsplaner-datamodel/pruefungsplaner-datamodel.pri)
@@ -14,11 +14,13 @@ INCLUDEPATH += $$PWD/libs/cpptoml/include
 SOURCES += \
     src/client.cpp \
     src/connectionmanager.cpp \
-    src/main.cpp
+    src/main.cpp \
+    src/semesterloader.cpp
 
 HEADERS += \
     src/client.h \
-    src/connectionmanager.h
+    src/connectionmanager.h \
+    src/semesterloader.h
 
 test{
     include($$PWD/libs/gtest/gtest_dependency.pri)
