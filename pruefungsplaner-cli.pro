@@ -12,15 +12,17 @@ INCLUDEPATH += $$PWD/libs/cpptoml/include
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        client.cpp \
-        connectionmanager.cpp \
-        main.cpp
-
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+    client.cpp \
+    connectionmanager.cpp \
+    main.cpp
 
 HEADERS += \
     client.h \
     connectionmanager.h
+
+unix{
+    # Install executable
+    target.path = /usr/bin
+}
+
+!isEmpty(target.path): INSTALLS += target
