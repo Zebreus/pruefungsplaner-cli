@@ -1,5 +1,5 @@
 QT -= gui
-QT += websockets
+QT += websockets core
 CONFIG += c++11 console network
 CONFIG -= app_bundle
 
@@ -19,6 +19,25 @@ SOURCES += \
 HEADERS += \
     client.h \
     connectionmanager.h
+
+test{
+    include($$PWD/libs/gtest/gtest_dependency.pri)
+
+    QT += testlib
+    TEMPLATE = app
+    TARGET = pruefungsplaner-cli-tests
+    INCLUDEPATH *= $$PWD/src
+
+    CONFIG *= thread
+    LIBS *= -lgtest -lgtest_main
+
+    SOURCES -= main.cpp
+    SOURCES += tests/clitests.cpp
+}
+else{
+    TEMPLATE = app
+    TARGET = pruefungsplaner-cli
+}
 
 unix{
     # Install executable
