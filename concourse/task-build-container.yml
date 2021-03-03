@@ -1,0 +1,24 @@
+---
+platform: linux
+
+image_resource:
+  type: registry-image
+  source:
+    repository: vito/oci-build-task
+
+inputs:
+  - name: pruefungsplaner-cli
+    path: pruefungsplaner-cli
+    optional: false
+
+outputs:
+  - name: image
+
+caches:
+  - path: cache
+
+params:
+  CONTEXT: ./pruefungsplaner-cli
+
+run:
+  path: build
